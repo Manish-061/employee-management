@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Login from './components/Auth/login'
 
 const App = () => {
   return (
     <> 
-        <div>Hello</div>
-        <login/>
+        <Login/>
     </>
   )
 }
