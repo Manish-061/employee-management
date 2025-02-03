@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import Login from './components/Auth/login'
+import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 
 const App = () => {
   return (
     <> 
-        <Login/>
+        {/* <Login/> */}
+        <EmployeeDashboard />
     </>
   )
 }
