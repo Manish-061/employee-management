@@ -16,20 +16,26 @@ const Login = ({ handleLogin }) => {
       <div className="border-2 rounded-2xl border-emerald-600 p-10 sm:p-16 shadow-lg bg-gray-800">
         <h2 className="text-3xl font-bold text-white text-center mb-6">Login</h2>
         <form 
-          onSubmit={submitHandler}
+           onSubmit={(e)=>{
+            submitHandler(e)
+        }}
           className="flex flex-col items-center justify-center"
         >
           <input
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e)=>{
+                setEmail(e.target.value)
+            }}
             required
             className="w-full outline-none bg-gray-700 text-white border-2 border-emerald-500 font-medium text-lg py-3 px-5 rounded-lg placeholder:text-gray-400 focus:border-emerald-400 transition-all duration-300"
             type="email"
             placeholder="Enter your email"
           />
           <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+             value={password}
+             onChange={(e)=>{
+                 setPassword(e.target.value)
+             }}
             required
             className="w-full outline-none bg-gray-700 text-white border-2 border-emerald-500 font-medium text-lg py-3 px-5 rounded-lg mt-4 placeholder:text-gray-400 focus:border-emerald-400 transition-all duration-300"
             type="password"

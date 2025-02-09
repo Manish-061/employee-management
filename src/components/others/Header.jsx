@@ -1,6 +1,16 @@
 import React, {useState} from 'react'
+import { setLocalStorage } from '../../utils/localStorage'
 
-const Header = () => {
+
+const Header = (props) => {
+
+  const logOutUser = ()=>{
+    localStorage.setItem('loggedInUser','')
+    props.changeUser('')
+  }
+
+
+
   return (
     <div className="w-full bg-gray-800 text-white py-4 px-6 flex items-center justify-between shadow-md rounded-lg">
     {/* Left - User Greeting */}
